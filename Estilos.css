@@ -1,0 +1,177 @@
+/* Paleta de colores inspirada en la naturaleza */
+:root {
+    --verde-principal: #328a2a;
+    --verde-claro: #8fb996;
+    --crema: #ffffff;
+    --rosa-acento: #e5b3b2;
+    --texto: #333;
+}
+
+/* Configuración general */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: var(--crema);
+    color: var(--texto);
+}
+
+/* Encabezado y Navegación */
+header {
+    background-color: rgb(255, 132, 0);
+    padding: 2rem 10%;
+    text-align: center;
+    border-bottom: 2px solid var(--rosa-acento);
+    color: white;
+}
+
+header h1 {
+    color: var(--verde-principal);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: white;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    color: #fefefe;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--verde-principal);
+    font-weight: bold;
+    transition: color 0.3s ease;
+    color: #ffffff;
+}
+
+nav ul li a:hover {
+    color: var(--rosa-acento);
+    color: #fefefe;
+}
+
+/* Secciones */
+section {
+    padding: 4rem 10%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+h2 {
+    color: var(--verde-principal);
+    border-bottom: 1px solid var(--verde-claro);
+    display: inline-block;
+    margin-bottom: 1.5rem;
+}
+
+/* Sección de Productos (lista personalizada) */
+#services ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+#services ul li {
+    background-color: var(--verde-claro);
+    color: white;
+    padding: 1rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Pie de página */
+footer {
+    background-color: var(--verde-principal);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+    margin-top: 3rem;
+}
+
+/* Un toque de responsividad */
+@media (max-width: 600px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+/* Estilos para las opciones de selección */
+.opciones-compra {
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.campo label {
+    font-weight: bold;
+    color: var(--verde-principal);
+}
+
+.campo select {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid var(--verde-claro);
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: white;
+}
+
+.lista-precios {
+    background-color: #f9f9f9;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid var(--rosa-acento);
+}
+
+.lista-precios ul {
+    list-style: none;
+    padding-top: 5px;
+}
+
+.lista-precios li {
+    font-size: 0.95rem;
+    margin-bottom: 3px;
+}
+.contacto-item {
+    margin-bottom: 1.5rem;
+    padding: 10px;
+    border-bottom: 1px dashed var(--verde-claro);
+}
+
+.contacto-item h3 {
+    font-size: 1.1rem;
+    color: var(--verde-principal);
+    margin-bottom: 5px;
+}
+
+.contacto-item a {
+    color: var(--verde-principal);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contacto-item a:hover {
+    color: var(--rosa-acento);
+}
+
