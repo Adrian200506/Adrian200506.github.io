@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encargar Ramos - Tamara Floristas</title>
+    <link rel="stylesheet" href="Estilos.css">
+</head>
+<body>
+
+    <header>
+<a href="index.html">
+    <img src="TAMARA blanco sin fondo.png" alt="Texto descriptivo" height="150" width="350">
+</a>        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre-nosotros.html">Sobre Nosotros</a></li>
+                <li><a href="Productos.html">Volver a Productos</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="productos-container">
+        <h2>Encarga tu Ramo</h2>
+        <p>Selecciona el estilo y el presupuesto que prefieras.</p>
+
+        <div class="grid-productos">
+            <article class="producto-card">
+                <div class="info-producto">
+                    <h3>Ramos Informales</h3>
+                    <p>Estilo natural y rústico.</p>
+                    
+                    <div class="opciones-compra">
+                        <label for="precio-informal">Selecciona el precio:</label>
+                        <select id="precio-informal">
+                            <option value="20">20€</option>
+                            <option value="30">30€</option>
+                            <option value="50">50€</option>
+                        </select>
+                    </div>
+
+                    <button onclick="enviarWhatsApp('Informal', 'precio-informal')" class="boton-ver">
+                        Encargar por WhatsApp
+                    </button>
+                </div>
+            </article>
+
+            <article class="producto-card">
+                <div class="info-producto">
+                    <h3>Ramos Formales</h3>
+                    <p>Elegancia y estructura clásica.</p>
+                    
+                    <div class="opciones-compra">
+                        <label for="precio-formal">Selecciona el precio:</label>
+                        <select id="precio-formal">
+                            <option value="25">25€</option>
+                            <option value="35">35€</option>
+                        </select>
+                    </div>
+
+                    <button onclick="enviarWhatsApp('Formal', 'precio-formal')" class="boton-ver">
+                        Encargar por WhatsApp
+                    </button>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <script>
+        function enviarWhatsApp(tipo, idSelect) {
+            const precio = document.getElementById(idSelect).value;
+            const telefono = "34606804161"; //
+            const mensaje = `Hola! Quiero encargar un Ramo ${tipo} de ${precio}€`;
+            window.open(`https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`, '_blank');
+        }
+    </script>
+
+    <footer>
+        <p>&copy; 2026 Tamara Floristas. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
